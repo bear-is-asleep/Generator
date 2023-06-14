@@ -164,9 +164,5 @@ void NuElectronPXSec::LoadConfig(void)
   if (!fElectronVelocity) {
     std::cerr << "Error: fElectronVelocity is not initialized correctly." << std::endl;
   }
-
-  // fElectronVelocity =
-  //     dynamic_cast<const ElectronVelocity *> (this->SubAlg("Electron-Velocity")); //
-  // assert(fXSecIntegrator);
 }
 //____________________________________________________________________________

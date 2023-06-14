@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<alg_conf>
+
+<!--
+Configuration for the NuElectronRadPXSec xsec algorithm.
+
+Configurable Parameters:
+....................................................................................
+Name                    Type     Optional   Comment                         Default
+WeinbergAngle           double   No                                         CommonParam[WeakInt] 
+XSec-Integrator         alg      No                                         genie::NuElectronXSec/Default    
+....................................................................................
+-->
+
+  <param_set name="Default"> 
+    <param type="string"  name="CommonParam"> WeakInt  </param>
+    <param type="alg"  name="XSec-Integrator"> genie::NuElectronXSec/Default  </param>
+    <param type="alg"  name="Electron-Velocity"> genie::ElectronVelocityMap/Default  </param>
+    <param type="int"    name ="N-Integration-Samples" >              10000  </param>
+    <param type="double"    name ="NuE-XSecRelError" >     0.0001  </param>
+
+    <!-- Constants - Coupling constants reported at mass scale mu = 2 GeV -->
+   <param type="double" name="alphas" >    0.3068      </param>
+   <param type="double" name="alpha"  >    1/133.309   </param>
+   <param type="double" name="mu"     >    2           </param>
+   <param type="double" name="Nc"     >    3.          </param>
+   <param type="double" name="lambda" >    10E-12      </param>
+   <param type="double" name="epsilon">    10E-8       </param>
+   <param type="double" name="lambdac">    386.15926764</param>
+   <param type="double" name="mcmu"   >    1.096       </param>
+   <param type="double" name="Pi_gg"  >    3.597       </param>
+
+   <!-- Couplings and charges -->
+   <param type="double" name="Qe"     >   -1           </param>
+   <param type="double" name="Qd"     >   -(1/3)       </param>
+   <param type="double" name="Qu"     >   2/3          </param>
+   <param type="double" name="cLl"    >   2.39818E-5   </param>
+   <param type="double" name="cLl_mu" >   -0.90084E-5  </param>
+   <param type="double" name="cRl"    >   0.76911E-5   </param>
+   <param type="double" name="cLu"    >   1.14065E-5   </param>
+   <param type="double" name="cRu"    >   -0.51173E-5  </param>
+   <param type="double" name="cLd"    >   -1.41478E-5  </param>
+   <param type="double" name="cRd"    >   0.25617E-5   </param>
+  </param_set>
+
+</alg_conf>
+
