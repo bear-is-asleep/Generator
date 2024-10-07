@@ -327,7 +327,7 @@ double Kinematics::GetKV(KineVar_t kv) const
      return iter->second;
   } else {
     LOG("Interaction", pWARN)
-        << "Kinematic variable: " << KineVar::AsString(kv) << " was not set";
+       << "Kinematic variable: " << KineVar::AsString(kv) << " was not set";
   }
   return -99999;
 }
